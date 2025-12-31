@@ -7,7 +7,7 @@ def show_menu():
         print("4. Update Contact")
         print("5. Delete Contact")
         print("6. Exit")
-        choice = input("Enter your choice : ").strip()
+        choice = input("\nEnter your choice : ").strip()
         if not choice.isnumeric() or choice not in "123456":
             print("Invalid choice. Please select between 1 and 6 numbers.")
             continue
@@ -28,7 +28,7 @@ def show_menu():
 
 
 def add_contact():
-    name = input("Enter the contact name  : ").strip().title()
+    name = input("\nEnter the contact name  : ").strip().title()
     phone_number = input(f"Enter the phone-number of {name} : ").strip()
     if not phone_number.isnumeric():
         print("Invalid PhoneNumber! please enter in numbers.")
@@ -45,13 +45,13 @@ def add_contact():
         parts = contact.split(",")
         existing_name = parts[0]
         if name.lower() == existing_name.lower():
-            print("Contact already exists, no duplicate contact allowed.")
+            print("\nContact already exists, no duplicate contact allowed.")
             return
 
     with open("contacts.txt", "a") as f:
         f.write(f"{name},{phone_number}\n")
 
-    print("Contact added successfully.")
+    print("Contact added successfully.\n")
 
 
 def view_contacts():
@@ -72,9 +72,7 @@ def view_contacts():
             parts = c.split(",")
             contact = parts[0]
             phone_number = parts[1]
-            print(f"{contact}:{phone_number}")
-
-    print("Contact updated successfully.")
+            print(f"{contact:<10}:{phone_number}")
 
 
 def search_contact():
@@ -99,11 +97,11 @@ def search_contact():
             matching_contact_found = True
 
     if not matching_contact_found:
-        print("No matching contact found.")
+        print("No matching contact found.\n")
 
 
 def update_contact():
-    u_name = input("Enter contact name to update : ").strip().title()
+    u_name = input("\nEnter contact name to update : ").strip().title()
 
     try:
         with open("contacts.txt", "r") as f:
@@ -141,11 +139,11 @@ def update_contact():
         for line in updated_contacts:
             f.write(line + "\n")
 
-    print("contact updated successfully.")
+    print("contact updated successfully.\n")
 
 
 def delete_contact():
-    name = input("Enter contact name to delete : ").strip().title()
+    name = input("\nEnter contact name to delete : ").strip().title()
     try:
         with open("contacts.txt", "r") as f:
             contacts = f.read().splitlines()
@@ -175,4 +173,7 @@ def delete_contact():
         for line in contacts_dele:
             f.write(line + "\n")
 
-    print("contact deleted successfully.")
+    print("contact deleted successfully.\n")
+
+
+show_menu()
