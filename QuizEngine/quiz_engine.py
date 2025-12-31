@@ -210,9 +210,8 @@ def view_scores():
         total = parts[2].strip()
         print(f"{index}. {username} : {score} / {total}")
 
-    if not invalid_count:
-        print("There's no invalid scores.")
-
+    if invalid_count == 0:
+        print("There's no invalid questions.")
     else:
         print(f"There's {invalid_count} invalid questions.")
 

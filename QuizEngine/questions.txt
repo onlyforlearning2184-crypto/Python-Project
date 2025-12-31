@@ -1,1 +1,6 @@
 What is Python? | programing language | snake | gost | animal | 1
+What is the output of print(2 + 3 * 4)? | 20 | 14 | 24 | 9 | 1
+Which keyword is used to define a function in Python? | func | def | define | function | 2
+Which data type is immutable in Python? | list | dictionary | set | tuple | 4
+What does len([1, 2, 3, 4]) return? | 3 | 4 | Error | None | 2
+Which loop runs until a condition becomes false? | for | while | do-while | infinity | 2

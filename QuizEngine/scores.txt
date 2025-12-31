@@ -1,2 +1,5 @@
 Tirth | 0 | 1
 Tirth | 1 | 1
+Tith | 4 | 6
+Tirth | 5 | 6
+Tirth | 6 | 6
