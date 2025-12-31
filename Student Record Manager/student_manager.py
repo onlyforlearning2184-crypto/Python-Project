@@ -37,23 +37,21 @@ def show_menu():
 def add_student():
 
     roll_number = input("Enter the roll number: ").strip()
-    name = input("Enter the name: ").strip().title()
-    marks = input("Enter marks: ").strip()
-
     if not roll_number.isdigit():
         print("Invalid roll number! Please enter a number.")
         return
+    name = input("Enter the name: ").strip().title()
+    if not name:
+        print("Invalid name! Name can never be empty.")
+        return
 
+    marks = input("Enter marks: ").strip()
     if not marks.isdigit():
         print("Invalid marks! Please enter a number.")
         return
 
     if int(marks) < 0 or int(marks) > 100:
         print("Invalid marks! Enter value between 0 and 100.")
-        return
-
-    if not name:
-        print("Invalid name! Name can never be empty.")
         return
 
     try:
@@ -281,3 +279,6 @@ def delete_student():
             f.write(f"{line}\n")
 
     print("Student deleted successfully.")
+
+
+show_menu()
