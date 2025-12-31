@@ -1,1 +1,6 @@
 food,200
+food,150
+travel,40
+entertainment,349
+food,280
+utilities,600
